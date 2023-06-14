@@ -10,7 +10,7 @@ import com.example.ecommerce.models.Customer;
 import com.example.ecommerce.models.Product;
 import com.example.ecommerce.repositories.CustomerRepository;
 import com.example.ecommerce.services.CustomerService;
-import com.example.ecommerce.utilities.Mapper;
+//import com.example.ecommerce.utilities.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +21,12 @@ public class CustomerServiceImpl implements CustomerService {
     CustomerRepository customerRepository;
     @Override
     public RegistrationResponse registerCustomer(RegistrationRequest registrationRequest) {
-        Customer customer = Mapper.map(registrationRequest);
-        customerRepository.save(customer);
-        RegistrationResponse response = Mapper.map(customer);
+//        Customer customer = Mapper.map(registrationRequest);
+//        customerRepository.save(customer);
+//        RegistrationResponse response = Mapper.map(customer);
 
-        return response;
+//        return response;
+        return null;
     }
 
     @Override

@@ -2,7 +2,6 @@ package com.example.ecommerce.controllers;
 
 import com.example.ecommerce.dto.requests.RegistrationRequest;
 import com.example.ecommerce.dto.response.ApiResponse;
-import com.example.ecommerce.dto.response.RegistrationResponse;
 import com.example.ecommerce.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +14,12 @@ public class CustomerController {
     @Autowired
     CustomerService customerService ;
 
-    @PostMapping("/customer_registration")
+    @PostMapping("/post")
+    public String find(){
+        return "post mapping was successful";
+    }
+
+//    @PostMapping("/registration")
     public ResponseEntity<?> customerRegistration(@RequestBody RegistrationRequest registrationRequest){
         return new ResponseEntity<>(new ApiResponse(true,
                 customerService.registerCustomer(registrationRequest)),
