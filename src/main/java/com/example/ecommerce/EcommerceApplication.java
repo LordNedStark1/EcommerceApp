@@ -9,7 +9,7 @@ public class EcommerceApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication. nrun(EcommerceApplication.class, args);
+        SpringApplication.run(EcommerceApplication.class, args);
     }
     
 }
