@@ -13,7 +13,7 @@ public class Product {
     private int quantity;
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "categoryId")
+//    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @Enumerated
     private Category category;
 }
