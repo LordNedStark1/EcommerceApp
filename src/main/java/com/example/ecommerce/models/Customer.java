@@ -1,21 +1,19 @@
 package com.example.ecommerce.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
 
 @Data
 @Entity
 @NoArgsConstructor
-public class Customer extends MainUser {
+public class Customer{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @OneToOne
-    private Long cartId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="cart_id",referencedColumnName = "id")
+    private Cart cart;
 }

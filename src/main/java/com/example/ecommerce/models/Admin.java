@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Admin extends MainUser {
+public class Admin{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
