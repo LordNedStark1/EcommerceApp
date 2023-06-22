@@ -6,7 +6,6 @@ import com.example.ecommerce.dto.requests.RegistrationRequest;
 import com.example.ecommerce.dto.response.LoginResponse;
 import com.example.ecommerce.dto.response.PaymentResponse;
 import com.example.ecommerce.dto.response.RegistrationResponse;
-import com.example.ecommerce.models.Customer;
 import com.example.ecommerce.models.Product;
 import com.example.ecommerce.repositories.CustomerRepository;
 import com.example.ecommerce.services.CustomerService;
