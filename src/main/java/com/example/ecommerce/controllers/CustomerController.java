@@ -9,12 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/ecommerce")
+//@RequestMapping("/ecommerce")
 public class CustomerController {
     @Autowired
     CustomerService customerService ;
 
-    @PostMapping("/post")
+    @GetMapping("/post")
     public String find(){
         return "post mapping was successful";
     }
@@ -25,7 +25,7 @@ public class CustomerController {
                 customerService.registerCustomer(registrationRequest)),
                 HttpStatus.CREATED);
     }
-    @GetMapping("/customer_login")
+//    @GetMapping("/customer_login")
     public ResponseEntity<?> customerLogin(@PathVariable String email, @PathVariable String password){
        return new ResponseEntity<>(new ApiResponse(true,
                 customerService.login(email, password)),
